@@ -4,6 +4,7 @@ const countryInput = document.querySelector('.country-input');
 const countryInfo = document.querySelector(".country-info ");
 
 
+
     // function to invoke/display country data on the web
 const renderCountry = function (data, className = '') {
 
@@ -71,6 +72,7 @@ const getCountryData = async function (country) {
         countryInput.value = "";
     }
 }
+
 
 
 // event listener for the button click

@@ -81,19 +81,20 @@ btn.addEventListener("click", () => {
     // getting the value of the input field and storing it in a variable
     let countryName = countryInput.value;
 
+     // removing the country info
+    countryInfo.classList.add("active1");
+    
     // if the input field is empty, display an error message and return from the function
     if (!countryName) {
         renderError(`Please enter a country name!`);
         return;
     }
+    
     // clearing the countries container before displaying the new country data
     countriesContainer.innerHTML = "";
 
     // changing the button text to "Loading..." while the data is being fetched
     btn.innerHTML = "Loading...";
-
-     // removing the country info
-    countryInfo.classList.add("active1")
 
     // calling the getCountryData function and passing the country name as an argument
     getCountryData(countryName);

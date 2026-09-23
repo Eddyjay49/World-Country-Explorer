@@ -149,11 +149,12 @@ body {
   color: #888;
   /* margin-top: 5rem; */
   margin-bottom: 6rem;
-  opacity: 1;
+  /* opacity: 1; */
+  display: block;
 }
 
 .active1{
-  opacity: 0;
+  display: none;
 }
 
 
@@ -253,5 +254,9 @@ body {
   /* margin-top: 5rem; */
   margin-bottom: 1rem;
   display: block;
+}
+
+.active1{
+  display: none;
 }
 }

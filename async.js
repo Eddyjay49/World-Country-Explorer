@@ -1,6 +1,7 @@
 const btn = document.querySelector('.btn-country');
 const countriesContainer = document.querySelector('.countries');
 const countryInput = document.querySelector('.country-input');
+const countryInfo = document.querySelector(".country-info");
 
 
     // function to invoke/display country data on the web
@@ -71,6 +72,7 @@ const getCountryData = async function (country) {
     }
 }
 
+
 // event listener for the button click
 btn.addEventListener("click", () => {
 
@@ -85,9 +87,12 @@ btn.addEventListener("click", () => {
     // clearing the countries container before displaying the new country data
     countriesContainer.innerHTML = "";
 
+    // removing the country info
+    countryInfo.classList.add("active1")
+
     // changing the button text to "Loading..." while the data is being fetched
     btn.innerHTML = "Loading...";
-    
+
     // calling the getCountryData function and passing the country name as an argument
     getCountryData(countryName);
 
